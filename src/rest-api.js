@@ -13,7 +13,7 @@ export const fetchImages = async (query, page) => {
     },
   });
   return {
-    ImageData: response.data.results,
+    imageData: response.data.results,
     totalPages: response.data.total_pages,
   };
 };
