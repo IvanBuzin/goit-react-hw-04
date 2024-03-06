@@ -20,8 +20,6 @@ export const App = () => {
   const [content, setContent] = useState({});
   const [showBtn, setShowBtn] = useState(false);
 
-  Modal.setAppElement("#root");
-
   useEffect(() => {
     if (!query) {
       return;
@@ -75,15 +73,7 @@ export const App = () => {
         {loader && <Loader />}
         {error && <ErrorMessage />}
         {showBtn && <LoadMoreBtn onClick={handleLoadMore} />}
-        <Modal
-          isOpen={isOpen}
-          onRequestClose={handleClose}
-          className={css.modal}
-          overlayClassName={css.overlay}
-        >
-          <ImageModal content={content} />
-        </Modal>
-
+        <ImageModal isOpen={isOpen} onClose={handleClose} content={content} />
         <Toaster position="top-right" />
       </div>
     </div>
