@@ -1,9 +1,9 @@
 import { Field, Form, Formik, ErrorMessage } from "formik";
 import toast from "react-hot-toast";
 import { FaSearch } from "react-icons/fa";
-import css from "./SesrchBar.module.css";
+import css from "./SearchBar.module.css";
 
-export const SesrchBar = ({ onSubmit }) => {
+export const SearchBar = ({ onSubmit }) => {
   return (
     <header className={css.header}>
       <Formik
