@@ -3,7 +3,7 @@ import Modal from "react-modal";
 
 export const ImageModal = ({
   isOpen,
-  isClose,
+  onClose,
   content: { description, urls, user, links },
 }) => {
   Modal.setAppElement("#root");
