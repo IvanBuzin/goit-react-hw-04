@@ -9,10 +9,11 @@ export const SearchBar = ({ onSubmit }) => {
       <Formik
         initialValues={{ query: "" }}
         onSubmit={(values, actions) => {
-          onSubmit(values.query);
-          if (!values.query) {
+          if (values.query === "") {
             toast.error("Please enter a search query");
+            return;
           }
+          onSubmit(values.query);
           actions.resetForm();
         }}
       >
